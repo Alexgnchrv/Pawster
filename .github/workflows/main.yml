@@ -44,7 +44,7 @@ jobs:
     
     - name: Install lint dependencies
       run: |
-        pip install -r ./requirements.lint.txt
+        pip install -r ./backend/requirements.lint.txt
 
     - name: Run flake8 linter
       run: |
