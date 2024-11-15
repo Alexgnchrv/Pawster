@@ -15,6 +15,7 @@ services:
     env_file: .env
     volumes:
       - static_volume:/backend_static
+      - media:/app/media
   frontend:
     image: alexgnchrv/kittygram_frontend
     env_file: .env
@@ -25,7 +26,7 @@ services:
     image: alexgnchrv/kittygram_gateway
     env_file: .env
     volumes:
-      - ./media:/var/www/kittygram/media
+      - media:/app/media
       - static_volume:/staticfiles/
     ports:
       - 9000:80
