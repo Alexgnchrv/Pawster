@@ -19,7 +19,7 @@ services:
       - db
     volumes:
       - static_volume:/backend_static
-      - kittygram_media:/media
+      - media:/media
   frontend:
     image: alexgnchrv/kittygram_frontend
     env_file: .env
@@ -34,7 +34,7 @@ services:
     depends_on:
       - frontend
     volumes:
-      - kittygram_media:/media
+      - media:/app/media
       - static_volume:/staticfiles/
     ports:
       - 9000:80
