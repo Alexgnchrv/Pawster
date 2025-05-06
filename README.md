@@ -1,12 +1,12 @@
-# Kittygram 🐾  
-Kittygram — это социальная сеть для обмена фотографиями ваших любимых питомцев. Проект использует контейнеризацию через Docker и автоматический процесс CI/CD, настроенный с помощью GitHub Actions.
+# Pawster 🐾  
+Pawster — это социальная сеть для обмена фотографиями ваших любимых питомцев. Проект использует контейнеризацию через Docker и автоматический процесс CI/CD, настроенный с помощью GitHub Actions.
 
 ## Установка и запуск
 
 1. Клонируйте репозиторий на свой локальный компьютер:
     ```bash
-    git clone git@github.com:Alexgnchrv/kittygram_final.git
-    cd kittygram
+    git clone git@github.com:Alexgnchrv/Pawster.git
+    cd Pawster
     ```
 
 2. Создайте файл `.env` и заполните его своими данными, используя образец `.env.example`, который находится в корневой директории проекта.
@@ -16,20 +16,20 @@ Kittygram — это социальная сеть для обмена фото�
 1. Построение Docker-образов:
     ```bash
     cd frontend
-    docker build -t username/kittygram_frontend .
+    docker build -t username/pawster_frontend .
 
     cd ../backend
-    docker build -t username/kittygram_backend .
+    docker build -t username/pawster_backend .
 
     cd ../nginx
-    docker build -t username/kittygram_gateway .
+    docker build -t username/pawster_gateway .
     ```
 
 2. Загрузка образов в DockerHub:
     ```bash
-    docker push username/kittygram_frontend
-    docker push username/kittygram_backend
-    docker push username/kittygram_gateway
+    docker push username/pawster_frontend
+    docker push username/pawster_backend
+    docker push username/pawster_gateway
     ```
 
 ## Деплой на сервер
@@ -41,7 +41,7 @@ Kittygram — это социальная сеть для обмена фото�
 
 2. Создайте директорию проекта на сервере:
     ```bash
-    mkdir kittygram
+    mkdir pawster
     ```
 
 3. Установите Docker и Docker Compose на сервер:
